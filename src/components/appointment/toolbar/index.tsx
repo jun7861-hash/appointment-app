@@ -43,6 +43,7 @@ const Toolbar = ({
             <div className="button-block">
               <button onClick={() => onNavigate("PREV")}>
                 <svg
+                  className="svg-fill"
                   width="20"
                   height="20"
                   viewBox="0 0 20 20"
