@@ -1,0 +1,282 @@
+.update-form {
+  max-width: 400px;
+  width: 100%;
+  border-left: 1px solid #d8d3cc;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    border-bottom: 1px solid #d8d3cc;
+
+    .block {
+      display: flex;
+      width: 100%;
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #1c1c1e;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+
+      button {
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+
+  form {
+    height: calc(100vh - 196px);
+    overflow-y: auto;
+  }
+
+  // component
+  .view-block {
+    padding: 20px 40px;
+    border-bottom: 1px solid #d8d3cc;
+
+    h3 {
+      font-weight: 800;
+      font-size: 14px;
+      color: #9d9c9c;
+      margin-bottom: 20px;
+    }
+
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .block {
+        display: flex;
+      }
+
+      .image {
+        margin-right: 24px;
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .details {
+        align-self: center;
+
+        .title {
+          font-weight: 700;
+          font-size: 16px;
+          color: #1c1c1e;
+          margin-bottom: 4px;
+        }
+        .sub {
+          font-weight: 500;
+          font-size: 16px;
+          color: #9d9c9c;
+        }
+      }
+
+      .actions {
+        position: relative;
+        color: #1c1c1e;
+
+        .svg-fill {
+          path {
+            fill: #1c1c1e;
+          }
+        }
+
+        button {
+          border: 0;
+          background-color: transparent;
+          cursor: pointer;
+        }
+
+        .options {
+          position: absolute;
+          right: -20px;
+          top: 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          border: 1px solid #d8d3cc;
+          width: 350px;
+
+          .title {
+            font-weight: 500;
+            font-size: 16px;
+            color: #9d9c9c;
+            border-bottom: 1px solid #d8d3cc;
+            padding: 10px 20px;
+          }
+
+          li {
+            border-bottom: 1px solid #d8d3cc;
+
+            &:last-child {
+              border-bottom: 0;
+            }
+
+            .details {
+              padding: 15px 20px;
+              cursor: pointer;
+
+              &:hover {
+                color: #f25d23;
+              }
+
+              .name {
+                margin-bottom: 5px;
+              }
+
+              .address {
+                font-size: 14px;
+                color: #9d9c9c;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .body {
+      ul {
+        li {
+          display: flex;
+          margin-bottom: 20px;
+
+          span {
+            display: block;
+          }
+
+          .left {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 100px;
+            margin-right: 20px;
+            font-weight: 500;
+            font-size: 16px;
+            color: #9d9c9c;
+
+            i {
+              display: flex;
+              align-items: center;
+              margin-right: 8px;
+
+              .svg-stroke {
+                stroke: #9d9c9c;
+              }
+
+              .svg-fill {
+                fill: #9d9c9c;
+              }
+            }
+          }
+
+          .right {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            color: #1c1c1e;
+          }
+        }
+      }
+      .pet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .uploader {
+          width: 75%;
+          padding-right: 12px;
+        }
+
+        .preview {
+          width: 25%;
+
+          img {
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+      .field {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .react-datepicker-wrapper {
+          width: 100%;
+        }
+
+        select {
+          display: block;
+          color: #1c1c1e;
+          padding: 5px;
+          width: 100%;
+          font-size: 16px;
+          border: 1px solid #d8d3cc;
+          outline: none;
+          border-radius: 5px;
+        }
+
+        label {
+          display: block;
+          color: #1c1c1e;
+          margin-bottom: 5px;
+          font-size: 14px;
+        }
+
+        input.input[type="text"],
+        input.input[type="datetime-local"] {
+          display: block;
+          padding: 5px;
+          width: 100%;
+          font-size: 16px;
+          border: 1px solid #d8d3cc;
+          outline: none;
+          border-radius: 5px;
+
+          &:focus {
+            border: 1px solid #1c1c1e;
+          }
+        }
+
+        input.input[type="file"] {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .submit {
+    .view-block {
+      border: none;
+
+      button {
+        width: 100%;
+        text-wrap: nowrap;
+        padding: 12px 20px;
+        color: #fff;
+        background-color: #ff630b;
+        border-radius: 12px;
+        border: 0;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+  // component end
+}

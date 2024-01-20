@@ -1,0 +1,50 @@
+.month-event {
+  border-radius: 5px;
+  padding: 5px 2px;
+
+  .title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1c1c1e;
+    margin-right: 5px;
+  }
+
+  .time {
+    font-size: 12px;
+    font-weight: 500;
+    color: #1c1c1e;
+  }
+
+  .attendees {
+    .owner {
+      margin-right: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .vet {
+      font-size: 12px;
+      font-weight: 500;
+      color: #1c1c1e;
+    }
+  }
+
+  &.theme-violet {
+    border: 1px solid #9747ff;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+      ),
+      #9747ff;
+  }
+  &.theme-orange {
+    border: 1px solid #ff9447;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 100%
+      ),
+      #ff9447;
+  }
+}

@@ -1,0 +1,60 @@
+.appointment {
+  display: flex;
+  height: 100%;
+}
+
+// RBC Overrides
+.rbc-calendar {
+  width: 100%;
+  height: calc(100vh - 124px);
+
+  .rbc-timeslot-group {
+    background-color: #fff;
+    flex-flow: unset;
+    align-items: center;
+    min-height: 100px;
+
+    .rbc-label {
+      display: block;
+      width: 140px;
+      text-align: center;
+    }
+  }
+
+  .rbc-time-view {
+    border-right: 0;
+  }
+
+  .rbc-event {
+    padding: 0;
+  }
+
+  .rbc-day-slot .rbc-event {
+    position: relative;
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+  }
+
+  .rbc-time-content {
+    border-top: 0;
+  }
+
+  .rbc-time-header.rbc-overflowing {
+    display: none;
+  }
+
+  .rbc-day-slot .rbc-events-container {
+    margin: 0 20px;
+    border-left: 0;
+  }
+
+  .rbc-current-time-indicator {
+    background-color: #f25d23;
+    height: 3px;
+  }
+
+  .rbc-day-slot .rbc-time-slot {
+    border-top: 0;
+  }
+}
