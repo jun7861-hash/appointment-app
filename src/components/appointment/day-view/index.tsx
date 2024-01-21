@@ -1,4 +1,4 @@
-import { EventWrapperProps } from "react-big-calendar";
+import { EventWrapperProps } from 'react-big-calendar';
 
 import {
   selectedEvent,
@@ -6,11 +6,11 @@ import {
   selectToUpdateEvent,
   removeEvent,
   toggleEventDropdown,
-} from "@/store/actions";
-import { dateToTime } from "@/helper/dateToTime";
-import { getTimeDifference } from "@/helper/getTimeDifference";
-import { Event } from "../events";
-import "./index.scss";
+} from '@/store/actions';
+import { dateToTime } from '@/helper/dateToTime';
+import { getTimeDifference } from '@/helper/getTimeDifference';
+import { Event } from '../events';
+import './index.scss';
 
 export const DayEvent = () => {
   return <div className="example_here">example</div>;
@@ -21,11 +21,11 @@ export const DayEventWrapper = (props: EventWrapperProps) => {
   const eventProp = props.event as Event;
   const minutes = 60;
   const theme =
-    eventProp.type === "consultation"
-      ? "violet"
-      : eventProp.type === "vaccination"
-      ? "orange"
-      : "";
+    eventProp.type === 'consultation'
+      ? 'violet'
+      : eventProp.type === 'vaccination'
+      ? 'orange'
+      : '';
   const timeDifference = getTimeDifference(
     eventProp.start as Date,
     eventProp.end as Date
@@ -51,14 +51,14 @@ export const DayEventWrapper = (props: EventWrapperProps) => {
         top: `${style?.top}%`,
         height: `${eventHeight}px`,
         width: `${style?.width}%`,
-        position: "absolute",
+        position: 'absolute',
       }}
     >
       <div className="block" onClick={() => selectedEvent(eventProp)}>
         <div className="event-icon">
           <div className={`circle theme-${theme}`}>
             <i>
-              {eventProp.type === "consultation" && (
+              {eventProp.type === 'consultation' && (
                 <svg
                   className={`svg-stroke theme-${theme}`}
                   width="20"
@@ -82,7 +82,7 @@ export const DayEventWrapper = (props: EventWrapperProps) => {
                   </defs>
                 </svg>
               )}
-              {eventProp.type === "vaccination" && (
+              {eventProp.type === 'vaccination' && (
                 <svg
                   className={`svg-fill theme-${theme}`}
                   width="20"

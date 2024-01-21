@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useSnapshot } from "valtio";
+import { useSnapshot } from 'valtio';
 
-import { store } from "@/store";
+import { store } from '@/store';
 import {
   toggleNotification,
   toggleSettings,
   toggleSignout,
-} from "@/store/actions";
-import "./index.scss";
+} from '@/store/actions';
+import './index.scss';
 
 const Nav = () => {
   const {
@@ -17,10 +17,7 @@ const Nav = () => {
   } = useSnapshot(store);
 
   return (
-    <nav
-      className="nav"
-       style={{ marginLeft: !minimize ? '240px': '120px'}}
-    >
+    <nav className="nav" style={{ marginLeft: !minimize ? '240px' : '120px' }}>
       <div className="search">
         <div className="search-block">
           <input placeholder="Search" />
@@ -71,7 +68,7 @@ const Nav = () => {
         <div className="actions">
           <ul>
             <li
-              className={`${actions.notification.show && "active"}`}
+              className={`${actions.notification.show && 'active'}`}
               onClick={toggleNotification}
             >
               <i>
@@ -93,7 +90,7 @@ const Nav = () => {
               </i>
             </li>
             <li
-              className={`${actions.settings.show && "active"}`}
+              className={`${actions.settings.show && 'active'}`}
               onClick={toggleSettings}
             >
               <i>
@@ -110,7 +107,7 @@ const Nav = () => {
               </i>
             </li>
             <li
-              className={`${actions.signout.show && "active"}`}
+              className={`${actions.signout.show && 'active'}`}
               onClick={toggleSignout}
             >
               <i>

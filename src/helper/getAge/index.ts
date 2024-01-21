@@ -24,9 +24,9 @@ export const calculateAge = (date: Date) => {
 
 export const formatAge = (age: { year: number; month: number }): string => {
   const yearString =
-    age.year > 0 ? `${age.year} ${age.year === 1 ? "year" : "years"}` : "";
+    age.year > 0 ? `${age.year} ${age.year === 1 ? 'year' : 'years'}` : '';
   const monthString =
-    age.month > 0 ? `${age.month} ${age.month === 1 ? "month" : "months"}` : "";
+    age.month > 0 ? `${age.month} ${age.month === 1 ? 'month' : 'months'}` : '';
 
   if (yearString && monthString) {
     return `${yearString} and ${monthString}`;
@@ -35,5 +35,5 @@ export const formatAge = (age: { year: number; month: number }): string => {
   } else if (monthString) {
     return monthString;
   }
-  return "Less than a month";
+  return 'Less than a month';
 };

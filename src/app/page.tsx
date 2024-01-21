@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useSnapshot } from "valtio";
+import { useSnapshot } from 'valtio';
 
-import { store } from "@/store";
+import { store } from '@/store';
 
 export default function Home() {
   const {
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main
       style={{
-        marginLeft: !minimize ? "240px" : "120px",
+        marginLeft: !minimize ? '240px' : '120px',
       }}
     ></main>
   );

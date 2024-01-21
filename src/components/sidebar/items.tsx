@@ -1,6 +1,6 @@
 export const items = [
   {
-    title: "Home",
+    title: 'Home',
     logo: (
       <i>
         <svg
@@ -21,10 +21,10 @@ export const items = [
       </i>
     ),
     isActive: false,
-    path: "/",
+    path: '/',
   },
   {
-    title: "Appointments",
+    title: 'Appointments',
     logo: (
       <i>
         <svg
@@ -40,10 +40,10 @@ export const items = [
       </i>
     ),
     isActive: true,
-    path: "/appointments",
+    path: '/appointments',
   },
   {
-    title: "Messages",
+    title: 'Messages',
     logo: (
       <i>
         <svg
@@ -59,10 +59,10 @@ export const items = [
       </i>
     ),
     isActive: false,
-    path: "/messages",
+    path: '/messages',
   },
   {
-    title: "Contacts",
+    title: 'Contacts',
     logo: (
       <i>
         <svg
@@ -82,10 +82,10 @@ export const items = [
       </i>
     ),
     isActive: false,
-    path: "/contacts",
+    path: '/contacts',
   },
   {
-    title: "Data Analytics",
+    title: 'Data Analytics',
     logo: (
       <i>
         <svg
@@ -101,10 +101,10 @@ export const items = [
       </i>
     ),
     isActive: false,
-    path: "/analytics",
+    path: '/analytics',
   },
   {
-    title: "Subscription",
+    title: 'Subscription',
     logo: (
       <i>
         <svg
@@ -125,10 +125,10 @@ export const items = [
       </i>
     ),
     isActive: false,
-    path: "/subscription",
+    path: '/subscription',
   },
   {
-    title: "Help Center",
+    title: 'Help Center',
     logo: (
       <i>
         <svg
@@ -144,10 +144,10 @@ export const items = [
       </i>
     ),
     isActive: false,
-    path: "/help-center",
+    path: '/help-center',
   },
   {
-    title: "Settings",
+    title: 'Settings',
     logo: (
       <i>
         <svg
@@ -163,6 +163,6 @@ export const items = [
       </i>
     ),
     isActive: false,
-    path: "/settings",
+    path: '/settings',
   },
 ];

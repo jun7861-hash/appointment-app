@@ -1,18 +1,18 @@
-import Image from "next/image";
-import { useSnapshot } from "valtio";
+import Image from 'next/image';
+import { useSnapshot } from 'valtio';
 
-import { store } from "@/store";
-import { showCreateForm } from "@/store/actions";
-import { calculateAge, formatAge } from "@/helper/getAge";
-import { toLocaleDateString } from "@/helper/formatDate";
-import "./index.scss";
+import { store } from '@/store';
+import { showCreateForm } from '@/store/actions';
+import { calculateAge, formatAge } from '@/helper/getAge';
+import { toLocaleDateString } from '@/helper/formatDate';
+import './index.scss';
 
 const View = () => {
   const {
     event: { selectedEvent },
   } = useSnapshot(store);
 
-  if (!("uid" in selectedEvent)) return;
+  if (!('uid' in selectedEvent)) return;
 
   const handleNewAppointment = () => {
     showCreateForm();
@@ -275,7 +275,7 @@ const View = () => {
                   src={
                     selectedEvent.pet_details.image.length
                       ? selectedEvent.pet_details.image
-                      : "https://dummyimage.com/52x52/aaa/111"
+                      : 'https://dummyimage.com/52x52/aaa/111'
                   }
                   alt={selectedEvent.pet_details.pet_name}
                 />

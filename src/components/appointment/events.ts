@@ -1,8 +1,8 @@
-import { uuidv4 } from "@/helper/uuidv4";
+import { uuidv4 } from '@/helper/uuidv4';
 
-export type EventType = "consultation" | "vaccination";
+export type EventType = 'consultation' | 'vaccination';
 
-export type Sex = "male" | "female";
+export type Sex = 'male' | 'female';
 
 export type EventActions = {
   show: boolean;
@@ -52,37 +52,37 @@ export type Events = Event[];
 export const events = [
   {
     uid: uuidv4(),
-    title: "Today",
-    start: new Date("2024-01-20T08:00:00.000Z"),
-    end: new Date("2024-01-20T09:00:00.000Z"),
-    type: "consultation",
+    title: 'Today',
+    start: new Date('2024-01-20T08:00:00.000Z'),
+    end: new Date('2024-01-20T09:00:00.000Z'),
+    type: 'consultation',
     sourceResource: null,
     actions: {
       show: false,
     },
     owner_details: {
-      owner_name: "Chrissie Lee",
-      image: "https://dummyimage.com/80x80/aaa/111",
-      email: "chrissielee@gmail.com",
-      contact_number: "+01 234 567 8910",
+      owner_name: 'Chrissie Lee',
+      image: 'https://dummyimage.com/80x80/aaa/111',
+      email: 'chrissielee@gmail.com',
+      contact_number: '+01 234 567 8910',
       address:
-        "1st Avenue, Golden Street, Springville Village, San Diego, California",
+        '1st Avenue, Golden Street, Springville Village, San Diego, California',
     },
     veterinary_details: {
-      veterinary_name: "Anika Perry",
-      image: "https://dummyimage.com/52x52/aaa/111",
-      address: "4517 Washington Avenue, Manchester, Kentucky 39495",
-      building: "Green Bow Vett",
-      email: "branch1@gmail.com",
-      contact_number: "+63 0123 123",
+      veterinary_name: 'Anika Perry',
+      image: 'https://dummyimage.com/52x52/aaa/111',
+      address: '4517 Washington Avenue, Manchester, Kentucky 39495',
+      building: 'Green Bow Vett',
+      email: 'branch1@gmail.com',
+      contact_number: '+63 0123 123',
     },
     pet_details: {
-      pet_name: "Brownie",
-      image: "https://dummyimage.com/52x52/aaa/111",
-      type: "Dog",
-      breed: "French Bulldog",
-      sex: "male",
-      birthday: new Date("2023-07-19T09:00:00.000Z"),
+      pet_name: 'Brownie',
+      image: 'https://dummyimage.com/52x52/aaa/111',
+      type: 'Dog',
+      breed: 'French Bulldog',
+      sex: 'male',
+      birthday: new Date('2023-07-19T09:00:00.000Z'),
     },
   },
 ] as Events;
