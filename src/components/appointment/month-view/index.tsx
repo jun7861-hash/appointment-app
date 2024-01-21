@@ -1,6 +1,6 @@
-import { dateToTime } from "@/helper/dateToTime";
-import { Event } from "../events";
-import "./index.scss";
+import { dateToTime } from '@/helper/dateToTime';
+import { Event } from '../events';
+import './index.scss';
 
 type MonthEventProps = {
   title: string;
@@ -11,7 +11,7 @@ const MonthEvent = (props: MonthEventProps) => {
   const { title, event } = props;
   const { start, end, type } = event;
   const theme =
-    type === "consultation" ? "violet" : type === "vaccination" ? "orange" : "";
+    type === 'consultation' ? 'violet' : type === 'vaccination' ? 'orange' : '';
 
   return (
     <div className={`month-event theme-${theme}`}>

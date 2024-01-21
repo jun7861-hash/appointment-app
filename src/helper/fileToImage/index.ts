@@ -6,7 +6,7 @@ export const fileToDataURL = (file: File) => {
       resolve(reader.result);
     };
     reader.onerror = () => {
-      reject(new Error("Unable to read the file."));
+      reject(new Error('Unable to read the file.'));
     };
     reader.readAsDataURL(file);
   });

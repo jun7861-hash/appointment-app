@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import { useSnapshot } from "valtio";
+import { useState } from 'react';
+import Link from 'next/link';
+import { useSnapshot } from 'valtio';
 
-import { store } from "@/store";
-import { toggleSidebar } from "@/store/actions";
-import "./index.scss";
+import { store } from '@/store';
+import { toggleSidebar } from '@/store/actions';
+import './index.scss';
 
 type Item = {
   logo: React.ReactNode;
@@ -36,10 +36,10 @@ const Sidebar = (props: Props) => {
   };
 
   return (
-    <aside style={{ maxWidth: !minimize ? "240px" : "120px" }}>
+    <aside style={{ maxWidth: !minimize ? '240px' : '120px' }}>
       <div
-        className={`minimizer ${!minimize ? "active" : ""}`}
-        style={{ color: "#fff" }}
+        className={`minimizer ${!minimize ? 'active' : ''}`}
+        style={{ color: '#fff' }}
         onClick={toggleSidebar}
       >
         <svg
@@ -79,12 +79,12 @@ const Sidebar = (props: Props) => {
           {menuItems.map((item: Item, index: number) => (
             <li
               key={index}
-              className={`item ${item.isActive ? "active" : ""}`}
+              className={`item ${item.isActive ? 'active' : ''}`}
               onClick={() => handleSelectItem(index)}
             >
               <Link
                 href={item.path}
-                style={{ justifyContent: !minimize ? "unset" : "center" }}
+                style={{ justifyContent: !minimize ? 'unset' : 'center' }}
               >
                 <span className="icon">{item.logo}</span>
                 {!minimize && <span className="title">{item.title}</span>}

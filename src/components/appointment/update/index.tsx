@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Image from "next/image";
-import { useSnapshot } from "valtio";
-import { useFormik } from "formik";
-import DatePicker from "react-datepicker";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { useSnapshot } from 'valtio';
+import { useFormik } from 'formik';
+import DatePicker from 'react-datepicker';
 
-import { store } from "@/store";
-import { selectVet, toggleVetOption, updateEvent } from "@/store/actions";
-import { fileToDataURL } from "@/helper/fileToImage";
-import { hasSelectedEvent } from "@/helper/hasSelectedEvent";
-import { Event, Sex, EventType } from "../events";
-import "./index.scss";
+import { store } from '@/store';
+import { selectVet, toggleVetOption, updateEvent } from '@/store/actions';
+import { fileToDataURL } from '@/helper/fileToImage';
+import { hasSelectedEvent } from '@/helper/hasSelectedEvent';
+import { Event, Sex, EventType } from '../events';
+import './index.scss';
 
 const Update = () => {
   const {
@@ -20,14 +20,14 @@ const Update = () => {
     events,
   } = useSnapshot(store);
   const [imagePreview, setImagePreview] = useState(
-    "https://dummyimage.com/100x100/aaa/111"
+    'https://dummyimage.com/100x100/aaa/111'
   );
 
   const updateInitialValues = {
-    uid: hasSelectedEvent(event.selectedEvent) ? event.selectedEvent?.uid : "",
+    uid: hasSelectedEvent(event.selectedEvent) ? event.selectedEvent?.uid : '',
     title: hasSelectedEvent(event.selectedEvent)
       ? event.selectedEvent?.title
-      : "",
+      : '',
     start: hasSelectedEvent(event.selectedEvent)
       ? event.selectedEvent?.start
       : new Date(),
@@ -36,56 +36,56 @@ const Update = () => {
       : new Date(),
     type: hasSelectedEvent(event.selectedEvent)
       ? event.selectedEvent?.type
-      : ("consultation" as EventType),
+      : ('consultation' as EventType),
     actions: {
       show: false,
     },
     owner_details: {
       owner_name: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.owner_details.owner_name
-        : "",
+        : '',
       image: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.owner_details.image
-        : "",
+        : '',
       email: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.owner_details.email
-        : "",
+        : '',
       contact_number: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.owner_details.contact_number
-        : "",
+        : '',
       address: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.owner_details.address
-        : "",
+        : '',
     },
     veterinary_details: {
       veterinary_name: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.veterinary_details.veterinary_name
-        : "",
+        : '',
       image: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.veterinary_details.image
-        : "",
+        : '',
       address: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.veterinary_details.address
-        : "",
+        : '',
       building: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.veterinary_details.building
-        : "",
+        : '',
       email: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.veterinary_details.email
-        : "",
+        : '',
       contact_number: hasSelectedEvent(event.selectedEvent)
         ? event.selectedEvent?.veterinary_details.contact_number
-        : "",
+        : '',
     },
     pet_details: {
-      pet_name: hasSelectedEvent(event) ? event?.pet_details.pet_name : "",
-      type: hasSelectedEvent(event) ? event?.pet_details.type : "",
-      breed: hasSelectedEvent(event) ? event?.pet_details.breed : "",
-      sex: hasSelectedEvent(event) ? event?.pet_details.sex : ("male" as Sex),
+      pet_name: hasSelectedEvent(event) ? event?.pet_details.pet_name : '',
+      type: hasSelectedEvent(event) ? event?.pet_details.type : '',
+      breed: hasSelectedEvent(event) ? event?.pet_details.breed : '',
+      sex: hasSelectedEvent(event) ? event?.pet_details.sex : ('male' as Sex),
       birthday: hasSelectedEvent(event)
         ? event?.pet_details.birthday
         : new Date(),
-      image: hasSelectedEvent(event) ? event?.pet_details.image : "",
+      image: hasSelectedEvent(event) ? event?.pet_details.image : '',
     },
   };
 
@@ -98,11 +98,11 @@ const Update = () => {
   });
 
   const handleStartDateChange = (date: Date) => {
-    formEvent.setFieldValue("start", date);
+    formEvent.setFieldValue('start', date);
   };
 
   const handleEndDateChange = (date: Date) => {
-    formEvent.setFieldValue("end", date);
+    formEvent.setFieldValue('end', date);
   };
 
   const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -115,7 +115,7 @@ const Update = () => {
     const preview = (await fileToDataURL(file)) as string;
 
     setImagePreview(preview);
-    formEvent.setFieldValue("pet_details.image", preview);
+    formEvent.setFieldValue('pet_details.image', preview);
   };
 
   return (
@@ -386,7 +386,10 @@ const Update = () => {
                 </div>
 
                 <div className="preview">
-                  <img alt={formEvent.values.pet_details.pet_name} src={imagePreview} />
+                  <img
+                    alt={formEvent.values.pet_details.pet_name}
+                    src={imagePreview}
+                  />
                 </div>
               </div>
             </div>

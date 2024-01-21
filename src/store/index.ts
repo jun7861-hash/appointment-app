@@ -1,16 +1,16 @@
 import {
   events,
   Events as EventsType,
-} from "./../components/appointment/events";
-import veterinary from "@/assets/json/veterinary.json";
-import { proxy } from "valtio";
+} from './../components/appointment/events';
+import veterinary from '@/assets/json/veterinary.json';
+import { proxy } from 'valtio';
 import {
   Event as EventType,
   VeterinaryDetails as VeterinaryDetailsType,
   EventType as EventTypeOf,
   Sex,
-} from "@/components/appointment/events";
-import { uuidv4 } from "@/helper/uuidv4";
+} from '@/components/appointment/events';
+import { uuidv4 } from '@/helper/uuidv4';
 
 type Navigation = {
   actions: {
@@ -95,28 +95,28 @@ export const store = proxy<{
     },
     event: {
       uid: uuidv4(),
-      title: "",
+      title: '',
       start: new Date(),
       end: endDefaultDate,
-      type: "consultation" as EventTypeOf,
+      type: 'consultation' as EventTypeOf,
       actions: {
         show: false,
       },
       owner_details: {
-        owner_name: "",
-        image: "",
-        email: "",
-        contact_number: "",
-        address: "",
+        owner_name: '',
+        image: '',
+        email: '',
+        contact_number: '',
+        address: '',
       },
       veterinary_details: veterinary[0],
       pet_details: {
-        pet_name: "",
-        type: "",
-        breed: "",
-        sex: "male" as Sex,
+        pet_name: '',
+        type: '',
+        breed: '',
+        sex: 'male' as Sex,
         birthday: new Date(),
-        image: "",
+        image: '',
       },
     },
   },

@@ -1,8 +1,8 @@
 import {
   Event as EventType,
   VeterinaryDetails as VeterinaryDetailsType,
-} from "@/components/appointment/events";
-import { store } from "@/store";
+} from '@/components/appointment/events';
+import { store } from '@/store';
 
 // NAVIGATION
 export const toggleNotification = () => {

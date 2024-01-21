@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { useSnapshot } from "valtio";
-import { useFormik } from "formik";
-import DatePicker from "react-datepicker";
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { useSnapshot } from 'valtio';
+import { useFormik } from 'formik';
+import DatePicker from 'react-datepicker';
 
-import { store } from "@/store";
-import { createNewEvent, selectVet, toggleVetOption } from "@/store/actions";
-import { fileToDataURL } from "@/helper/fileToImage";
-import { Event, VeterinaryDetails } from "../events";
-import "./index.scss";
+import { store } from '@/store';
+import { createNewEvent, selectVet, toggleVetOption } from '@/store/actions';
+import { fileToDataURL } from '@/helper/fileToImage';
+import { Event, VeterinaryDetails } from '../events';
+import './index.scss';
 
 const Create = () => {
   const [imagePreview, setImagePreview] = useState(
-    "https://dummyimage.com/100x100/aaa/111"
+    'https://dummyimage.com/100x100/aaa/111'
   );
 
   const {
@@ -34,11 +34,11 @@ const Create = () => {
   });
 
   const handleStartDateChange = (date: Date) => {
-    formEvent.setFieldValue("start", date);
+    formEvent.setFieldValue('start', date);
   };
 
   const handleEndDateChange = (date: Date) => {
-    formEvent.setFieldValue("end", date);
+    formEvent.setFieldValue('end', date);
   };
 
   const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,24 +51,24 @@ const Create = () => {
     const preview = (await fileToDataURL(file)) as string;
 
     setImagePreview(preview);
-    formEvent.setFieldValue("pet_details.image", preview);
+    formEvent.setFieldValue('pet_details.image', preview);
   };
 
   useEffect(() => {
     // Setting up dummy values
     if (showForm.create) {
       formEvent.setFieldValue(
-        "owner_details.image",
-        "https://dummyimage.com/100x100/aaa/111"
+        'owner_details.image',
+        'https://dummyimage.com/100x100/aaa/111'
       );
-      formEvent.setFieldValue("owner_details.email", "dummyemail@gmail.com");
+      formEvent.setFieldValue('owner_details.email', 'dummyemail@gmail.com');
       formEvent.setFieldValue(
-        "owner_details.contact_number",
-        "+01 234 567 8910"
+        'owner_details.contact_number',
+        '+01 234 567 8910'
       );
       formEvent.setFieldValue(
-        "owner_details.address",
-        "Dummy Address 1st Avenue, Golden Street, Springville Village, San Diego, California"
+        'owner_details.address',
+        'Dummy Address 1st Avenue, Golden Street, Springville Village, San Diego, California'
       );
     }
   }, []);
